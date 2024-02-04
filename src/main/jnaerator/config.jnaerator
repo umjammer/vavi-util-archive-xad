@@ -1,0 +1,13 @@
+-I /usr/local/Cellar/unar/1.10.7/include
+
+-root vavi.util.archive.unar
+
+//-parseInOneChunk
+-runtime JNA
+
+//-o "$(DIR)/../java" // overwrite versioned files instead of writing to target/generated-sources/java
+
+//-v
+//-choicesOut "$(DIR)/rococoa.choices"
+
+/usr/local/Cellar/unar/1.10.7/include/libXADMaster/xadmaster.h
