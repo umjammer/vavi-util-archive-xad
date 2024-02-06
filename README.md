@@ -21,8 +21,8 @@ $ brew intall unar
 
 ```shell
 $ cd ~/Library/Frameworks/
-$ ln -s /opt/homebrew/Cellar/xad/x.xx.x/Frameworks/UniversalDetector.framework .
-$ ln -s /opt/homebrew/Cellar/xad/x.xx.x/Frameworks/XADMaster.framework .
+$ ln -s /opt/homebrew/Cellar/unar/x.xx.x/Frameworks/UniversalDetector.framework .
+$ ln -s /opt/homebrew/Cellar/unar/x.xx.x/Frameworks/XADMaster.framework .
 ```
 
  or
