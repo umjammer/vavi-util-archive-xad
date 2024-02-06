@@ -1,4 +1,4 @@
-[![Release](https://jitpack.io/v/umjammer/vavi-util-archive-xad.svg)](https://jitpack.io/#umjammer/vavi-util-archive-xad)
+[![GitHub Packages](https://github.com/umjammer/vavi-util-archive-xad/actions/workflows/maven-publish.yml/badge.svg)](https://github.com/umjammer?tab=packages&repo_name=vavi-util-archive-xad)
 [![Java CI](https://github.com/umjammer/vavi-util-archive-xad/actions/workflows/maven.yml/badge.svg)](https://github.com/umjammer/vavi-util-archive-xad/actions/workflows/maven.yml)
 [![CodeQL](https://github.com/umjammer/vavi-util-archive-xad/actions/workflows/codeql.yml/badge.svg)](https://github.com/umjammer/vavi-util-archive-xad/actions/workflows/codeql-analysis.yml)
 ![Java](https://img.shields.io/badge/Java-17-b07219)
