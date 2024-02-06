@@ -31,7 +31,7 @@ jobs:
     - name: Build with Maven
       run: |
         brew install unar
-        brew list unar
+        mkdir ~/Library/Frameworks
         (cd ~/Library/Frameworks; ln -s /opt/homebrew/Cellar/xad/*/Frameworks/UniversalDetector.framework .)
         (cd ~/Library/Frameworks; ln -s /opt/homebrew/Cellar/xad/*/Frameworks/XADMaster.framework .)
         mvn -B package --file pom.xml -s $GITHUB_WORKSPACE/settings.xml
