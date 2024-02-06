@@ -9,7 +9,7 @@ archiver spi over mac [The Unarchiver XADMaster part](https://github.com/MacPaw/
 
 ## Install
 
-### xad
+### unar
 
  * install
 
