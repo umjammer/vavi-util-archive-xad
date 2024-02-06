@@ -41,14 +41,11 @@ class Test1 {
         return Files.exists(Paths.get("local.properties"));
     }
 
-    @Property(name = "test.arc")
-    String file = "src/test/resources/test.arc";
+    @Property(name = "test.file1")
+    String file1 = "src/test/resources/test.arc";
 
-    @Property(name = "test.7z")
-    String sevenzip = "src/test/resources/test.7z";
-
-    @Property(name = "test.sit")
-    String sit = "src/test/resources/test.sit";
+    @Property(name = "test.file2")
+    String file2 = "src/test/resources/test.7z";
 
     Path tmp = Path.of("tmp");
 
@@ -71,13 +68,13 @@ Debug.print(xad);
 
     @Test
     void test1() throws Exception {
-        XADSimpleUnarchiver unarchiver = XADSimpleUnarchiver.simpleUnarchiverForPath(file);
+        XADSimpleUnarchiver unarchiver = XADSimpleUnarchiver.simpleUnarchiverForPath(file1);
 Debug.print(unarchiver);
     }
 
     @Test
     void test2() throws Exception {
-        XADArchive archive = XADArchive.archiveForFile(file);
+        XADArchive archive = XADArchive.archiveForFile(file1);
 Debug.println("numberOfEntries: " + archive.numberOfEntries());
         archive.getEntries().forEach(Debug::println);
         archive.close();
@@ -85,7 +82,7 @@ Debug.println("numberOfEntries: " + archive.numberOfEntries());
 
     @Test
     void test3() throws Exception {
-        Archive archive = new UnarArchive(Path.of(sevenzip).toFile());
+        Archive archive = new UnarArchive(Path.of(file2).toFile());
 Debug.println("entries: " + archive.entries().length);
         Arrays.stream(archive.entries()).forEach(e -> System.out.printf("%-40s %10d %s%n", e.getName(), e.getSize(), Instant.ofEpochMilli(e.getTime())));
         archive.close();
@@ -93,7 +90,7 @@ Debug.println("entries: " + archive.entries().length);
 
     @Test
     void test4() throws Exception {
-        Path path = Path.of(sevenzip);
+        Path path = Path.of(file2);
         Archive archive = new UnarArchive(path.toFile());
         Path outBase = tmp.resolve(path.getFileName().toString());
         if (!Files.exists(outBase)) {
