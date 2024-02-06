@@ -73,7 +73,7 @@ jobs:
     #   make release
     - name: Build with Maven
       run: |
-        run: mvn -B package --file pom.xml -s $GITHUB_WORKSPACE/settings.xml -Dmaven.test.skip=true
+        mvn -B package --file pom.xml -s $GITHUB_WORKSPACE/settings.xml -Dmaven.test.skip=true
       env:
         GITHUB_TOKEN: ${{ github.token }}
 
