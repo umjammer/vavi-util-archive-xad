@@ -1,6 +1,6 @@
 -I /usr/local/Cellar/unar/1.10.7/include
 
--root vavi.util.archive.unar
+-root vavi.util.archive.xad
 
 //-parseInOneChunk
 -runtime JNA

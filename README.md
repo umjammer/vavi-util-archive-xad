@@ -56,7 +56,7 @@ $ ln -s /opt/homebrew/Cellar/xad/x.xx.x/Frameworks/XADMaster.framework .
 ## TODO
 
  * frameworks setting for github actions
- * rename package unar -> xad also
+ * ~~rename package unar -> xad also~~
 
 ## Supported Formats
 
