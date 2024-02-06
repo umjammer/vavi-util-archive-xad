@@ -31,7 +31,7 @@ jobs:
     - name: Build with Maven
       run: |
         brew install unar
-        v=brew info unar | grep stable | awk '{print $4}'
+        v=$(brew info unar | grep stable | awk '{print $4}')
         echo $v
         mkdir -p ~/Library/Frameworks
         (cd ~/Library/Frameworks; ln -s /opt/homebrew/Cellar/xad/$v/Frameworks/UniversalDetector.framework .)
