@@ -56,6 +56,7 @@ $ ln -s /opt/homebrew/Cellar/xad/x.xx.x/Frameworks/XADMaster.framework .
 ## TODO
 
  * frameworks setting for github actions
+ * rename package unar -> xad also
 
 ## Supported Formats
 
@@ -121,4 +122,3 @@ $ ln -s /opt/homebrew/Cellar/xad/x.xx.x/Frameworks/XADMaster.framework .
 | SHK | Apple II archive format. | 119 |
 | Amiga compressors | The Amiga had a lot of different single-file compressors. Support for more of these would be useful. libxfd supports many of them, but is mostly 68k only. |
 | | Deb | Linux package format. |
-|

@@ -9,7 +9,7 @@
 
   <properties>
     <jnaerator.version>0.12</jnaerator.version>
-    <rococoa.version>0.8.6-SNAPSHOT</rococoa.version>
+    <rococoa.version>0.8.6</rococoa.version>
   </properties>
 
   <profiles>
