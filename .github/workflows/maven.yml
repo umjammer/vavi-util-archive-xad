@@ -34,9 +34,10 @@ jobs:
         v=$(brew info unar | grep stable | awk '{print $4}')
         echo $v
         mkdir -p ~/Library/Frameworks
-        (cd ~/Library/Frameworks; ln -s /opt/homebrew/Cellar/xad/$v/Frameworks/UniversalDetector.framework .)
-        (cd ~/Library/Frameworks; ln -s /opt/homebrew/Cellar/xad/$v/Frameworks/XADMaster.framework .)
+        (cd ~/Library/Frameworks; ln -s /opt/homebrew/Cellar/unar/$v/Frameworks/UniversalDetector.framework .)
+        (cd ~/Library/Frameworks; ln -s /opt/homebrew/Cellar/unar/$v/Frameworks/XADMaster.framework .)
         ls -l ~/Library/Frameworks/
+        file ~/Library/Frameworks/*
         mvn -B package --file pom.xml -s $GITHUB_WORKSPACE/settings.xml
       env:
         GITHUB_TOKEN: ${{ github.token }}
