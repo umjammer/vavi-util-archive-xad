@@ -5,7 +5,7 @@
 
   <groupId>vavi</groupId>
   <artifactId>vavi-util-archive-xad</artifactId>
-  <version>0.0.1</version>
+  <version>0.0.2</version>
 
   <distributionManagement>
     <repository>
@@ -16,7 +16,6 @@
 
   <properties>
     <jnaerator.version>0.12</jnaerator.version>
-    <rococoa.version>0.8.6</rococoa.version>
   </properties>
 
   <profiles>
@@ -43,45 +42,6 @@
         </plugins>
       </build>
     </profile>
-
-    <profile>
-      <id>mac</id>
-      <activation>
-        <os>
-          <family>mac</family>
-        </os>
-      </activation>
-      <build>
-        <plugins>
-          <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-dependency-plugin</artifactId>
-            <version>3.6.0</version>
-            <executions>
-              <execution>
-                <id>copy</id>
-                <phase>generate-resources</phase>
-                <goals>
-                  <goal>copy</goal>
-                </goals>
-                <configuration>
-                  <artifactItems>
-                    <artifactItem>
-                      <groupId>org.rococoa</groupId>
-                      <artifactId>rococoa-core</artifactId>
-                      <type>dylib</type>
-                      <overWrite>true</overWrite>
-                      <outputDirectory>${project.build.testOutputDirectory}</outputDirectory>
-                      <destFileName>librococoa.dylib</destFileName>
-                    </artifactItem>
-                  </artifactItems>
-                </configuration>
-              </execution>
-            </executions>
-          </plugin>
-        </plugins>
-      </build>
-    </profile>
   </profiles>
 
   <build>
@@ -100,7 +60,7 @@
         <version>3.2.2</version>
         <configuration>
           <argLine>
-            <!-- on mac confirm ~/Library/Frameworks/{UniversalDetector.framework,XADMaster.framework} are not broken -->
+            <!-- on mac, confirm ~/Library/Frameworks/{UniversalDetector.framework,XADMaster.framework} are not broken -->
             -Djava.util.logging.config.file=${project.build.testOutputDirectory}/logging.properties
           </argLine>
           <trimStackTrace>false</trimStackTrace>
@@ -113,10 +73,6 @@
     <repository>
       <id>jitpack.io</id>
       <url>https://jitpack.io</url>
-    </repository>
-    <repository>
-      <id>github</id>
-      <url>https://maven.pkg.github.com/umjammer/*</url>
     </repository>
   </repositories>
 
@@ -140,9 +96,9 @@
     </dependency>
 
     <dependency>
-      <groupId>org.rococoa</groupId>
+      <groupId>com.github.umjammer.rococoa</groupId> <!-- org.rococoa / com.github.umjammer.rococoa -->
       <artifactId>rococoa-core</artifactId>
-      <version>${rococoa.version}</version>
+      <version>0.8.7</version>
     </dependency>
 
     <dependency>

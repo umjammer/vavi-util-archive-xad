@@ -1,11 +1,11 @@
-[![GitHub Packages](https://github.com/umjammer/vavi-util-archive-xad/actions/workflows/maven-publish.yml/badge.svg)](https://github.com/umjammer?tab=packages&repo_name=vavi-util-archive-xad)
+[![Release](https://jitpack.io/v/umjammer/vavi-util-archive-xad.svg)](https://jitpack.io/#umjammer/vavi-util-archive-xad)
 [![Java CI](https://github.com/umjammer/vavi-util-archive-xad/actions/workflows/maven.yml/badge.svg)](https://github.com/umjammer/vavi-util-archive-xad/actions/workflows/maven.yml)
 [![CodeQL](https://github.com/umjammer/vavi-util-archive-xad/actions/workflows/codeql.yml/badge.svg)](https://github.com/umjammer/vavi-util-archive-xad/actions/workflows/codeql-analysis.yml)
 ![Java](https://img.shields.io/badge/Java-17-b07219)
 
 # vavi-util-archive-xad
 
-archiver spi over mac [The Unarchiver XADMaster part](https://github.com/MacPaw/XADMaster) by jna 
+archiver spi over mac [The Unarchiver XADMaster](https://github.com/MacPaw/XADMaster) via jna 
 
 ## Install
 
@@ -55,7 +55,7 @@ $ ln -s /opt/homebrew/Cellar/unar/x.xx.x/Frameworks/XADMaster.framework .
 
 ## TODO
 
- * frameworks setting for github actions
+ * ~~frameworks setting for github actions~~
  * ~~rename package unar -> xad also~~
 
 ## Supported Formats
